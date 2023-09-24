@@ -3,7 +3,7 @@
     // Map option
 
     var options = {
-        center: {lat: 38.3460 , lng:-0.4907 },
+        center: {lat: 28.737324 , lng: 77.090981 },
         zoom: 25
     }
 
@@ -22,7 +22,7 @@
     //Marker
 /*
     const marker = new google.maps.Marker({
-    position:{lat: 37.9922, lng: -1.1307},
+    position:{lat: 28.737324, lng:77.090981},
     map:map,
     icon:"https://img.icons8.com/nolan/2x/marker.png"
     });
@@ -37,7 +37,7 @@
 
     //Add Markers to Array
 
-    let MarkerArray = [ {location:{lat: 37.9922, lng: -1.1307}, 
+    let MarkerArray = [ {location:{lat:  28.737324, lng: 77.090981}, 
         imageIcon: "https://img.icons8.com/nolan/2x/marker.png", 
         content: `<h2>team 1 </h2>`},
 
