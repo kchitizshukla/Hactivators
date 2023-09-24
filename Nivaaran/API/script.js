@@ -4,7 +4,7 @@
 
     var options = {
         center: {lat: 28.737324 , lng: 77.090981 },
-        zoom: 25
+        zoom: 10
     }
 
     //New Map
@@ -39,11 +39,22 @@
 
     let MarkerArray = [ {location:{lat:  28.737324, lng: 77.090981}, 
         imageIcon: "https://img.icons8.com/nolan/2x/marker.png", 
-        content: `<h2>team 1 </h2>`},
+        content: `<h2>INDIAN ARMY </h2>`},
 
-        {location:{lat: 28.737324, lng: 77.090981}},
+        {location:{lat: 28.70781, lng: 77.15295},imageIcon: "https://img.icons8.com/nolan/2x/marker.png", content: `<h2> CIVIL DEFENCE </h2>`},
 
-        {location:{lat: 28.737330, lng: 77.090990},content: `<h2>team 2</h2>` }
+        {location:{lat: 28.699774, lng: 77.138596},imageIcon: "https://img.icons8.com/nolan/2x/marker.png",content: `<h2>AIR FORCE</h2>` },
+		
+	{location:{lat: 28.699100, lng: 77.138900},imageIcon: "https://img.icons8.com/nolan/2x/marker.png",content: `<h2>AMBULANCE</h2>` },
+		
+	{location:{lat: 28.699900, lng: 77.138400},imageIcon: "https://img.icons8.com/nolan/2x/marker.png",content: `<h2>DELHI POLICE UNIT 1</h2>` },
+		
+        {location:{lat: 28.699000, lng: 77.138700},imageIcon: "https://img.icons8.com/nolan/2x/marker.png",content: `<h2>DELHI POLICE UNIT 2</h2>` }
+			    
+		
+		
+		
+		
 
 
 
