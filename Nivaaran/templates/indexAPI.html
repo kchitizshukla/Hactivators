@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivaaran</title>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- custom css file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+      body {
+        background-color: #e95f31;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header section starts -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <img
+          src="{{ url_for('static', filename='images/Ministry_of_Home_Affairs.png') }}"
+          alt=""
+        />
+      </a>
+
+      <nav class="navbar">
+        <div id="close" class="fas fa-times"></div>
+
+        <a href="{{ url_for('index') }}" class="nav_item">Home</a>
+        <a href="{{ url_for('about') }}" class="nav_item">About</a>
+        <a href="{{ url_for('indexAPI') }}" class="nav_item">Map</a>
+        <a href="{{ url_for('index') }}" class="nav_item">Contact Us</a>
+        <a href="{{ url_for('register') }}" class="nav_item">Register</a>
+      </nav>
+
+      <div id="menu" class="fas fa-bars"></div>
+    </header>
+
+    <div
+      id="map"
+      data-army-icon="{{ url_for('static', filename='images/army.png') }}"
+      data-crpf-icon="{{ url_for('static', filename='images/crpf.png') }}"
+      data-ambulance-icon="{{ url_for('static', filename='images/ambulance.png') }}"
+      data-police-icon="{{ url_for('static', filename='images/police.png') }}"
+    ></div>
+
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxZQykd8Dl6WvTsrDIIyS1rIa1bUKxoiw&callback=initMap"
+    ></script>
+    <script src="{{ url_for('static', filename='js/scriptAPI.js') }}"></script>
+  </body>
+</html>
