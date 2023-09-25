@@ -9,6 +9,10 @@
   transition: .2s linear;
 }
 
+body {
+  background-color: #e95f31;
+}
+
 html{
   font-size: 62.5%;
 }

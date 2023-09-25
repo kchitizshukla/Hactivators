@@ -52,10 +52,11 @@ def logout():
 @app.route('/register', methods =['GET', 'POST'])
 def register():
     mesage = ''
-    if request.method == 'POST' and 'name' in request.form and 'password' in request.form and 'email' in request.form :
+    if request.method == 'POST' and 'name' in request.form and 'Location' in request.form and 'Type' in request.form and 'email' in request.form:
         userName = request.form['name']
-        password = request.form['password']
         email = request.form['email']
+        location = request.form['Location']
+        type = request.form['Type']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM user WHERE email = % s', (email, ))
         account = cursor.fetchone()
@@ -63,10 +64,10 @@ def register():
             mesage = 'Account already exists !'
         elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
             mesage = 'Invalid email address !'
-        elif not userName or not password or not email:
+        elif not userName or not location or not type:
             mesage = 'Please fill out the form !'
         else:
-            cursor.execute('INSERT INTO user VALUES ( % s, % s, % s)', (userName, email, password))
+            cursor.execute('INSERT INTO request VALUES ( % s, % s, % s, %s)', (userName, email, location, type))
             mysql.connection.commit()
             mesage = 'You have successfully registered !'
             
